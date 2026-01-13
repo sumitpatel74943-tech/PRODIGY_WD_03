@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tic Tac Toe Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Tic Tac Toe</h1>
+
+    <div class="top-controls">
+        <button onclick="setMode('pvp')">Player vs Player</button>
+        <button onclick="setMode('ai')">Player vs AI</button>
+        <button onclick="toggleTheme()">🌙 / ☀️</button>
+    </div>
+
+    <div class="score-board">
+        <span>X Score: <b id="xScore">0</b></span>
+        <span>O Score: <b id="oScore">0</b></span>
+    </div>
+
+    <div class="game-board">
+        <div class="win-line"></div>
+
+        <div class="cell" onclick="makeMove(0)"></div>
+        <div class="cell" onclick="makeMove(1)"></div>
+        <div class="cell" onclick="makeMove(2)"></div>
+        <div class="cell" onclick="makeMove(3)"></div>
+        <div class="cell" onclick="makeMove(4)"></div>
+        <div class="cell" onclick="makeMove(5)"></div>
+        <div class="cell" onclick="makeMove(6)"></div>
+        <div class="cell" onclick="makeMove(7)"></div>
+        <div class="cell" onclick="makeMove(8)"></div>
+    </div>
+
+    <h2 id="status">Player X Turn</h2>
+
+    <button class="reset" onclick="resetGame()">Restart Game</button>
+
+    <!-- ✅ Clapping Sound -->
+    <audio id="clapSound" src="https://www.soundjay.com/human/sounds/applause-01.mp3"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
